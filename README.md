@@ -38,23 +38,6 @@ En esta etapa, la agencia necesita ampliar su sistema para gestionar otras entid
     └── GestorEntidades.java
 
 ````
-## Ejecución
-
-1. Clonar el repositorio:
-
-```bash
-git clone https://github.com/Benjamin-N0/Llanquihue_Tour_semana_8
-```
-
-2. Abrir el proyecto en Apache NetBeans.
-3. Ejecutar la clase
-```bash
-ui/Main
-```
-4. Seleccionar el tipo de dato a ingrasar (guia, vehiculo, Trabajador Externo).
-5. Completar los datos solicitados.
-6. Presionar **Agregar**.
-7. Presionar **Mostrar** para visualizar las entidades registradas.
 
 ## Descripción de las clases
 
@@ -122,3 +105,23 @@ Funciones principales:
 - Mostrar el resumen de cada entidad.
 
 ---
+
+## Ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/Benjamin-N0/Llanquihue_Tour_semana_8
+```
+
+2. Abrir el proyecto en Apache NetBeans.
+3. Ejecutar la clase
+```bash
+ui/Main
+```
+4. Seleccionar el tipo de dato a ingrasar (guia, vehiculo, Trabajador Externo).
+5. Completar los datos solicitados.
+6. Presionar **Agregar**.
+7. Presionar **Mostrar** para visualizar las entidades registradas.
+
+
