@@ -34,9 +34,11 @@ En esta etapa, la agencia necesita ampliar su sistema para gestionar otras entid
     └── ColaboradorExterno.java
     └── Registrable.java
 
-├── data/                          # Clase encargda de creacion de rutas
+├── data/                          # Clase encargada de creacion de rutas
     └── GestorEntidades.java
 
+├── util/                          # Clase encargada de validar datos
+    └── Validador.java
 ````
 
 ## Descripción de las clases
@@ -103,6 +105,22 @@ Funciones principales:
 - Recorrer la colección.
 - Diferenciar los objetos mediante `instanceof`.
 - Mostrar el resumen de cada entidad.
+
+---
+
+## Validador
+
+Clase ubicada en el paquete **util**.
+
+Se encarga de realizar las validaciones del sistema para evitar datos incorrectos ingresados por el usuario.
+
+Actualmente permite validar:
+
+- Que el nombre solo contenga letras.
+- Que los campos obligatorios sean completados.
+- Que el RUT tenga un formato válido.
+
+Esta separación permite mantener la lógica de validación independiente de la interfaz gráfica.
 
 ---
 
