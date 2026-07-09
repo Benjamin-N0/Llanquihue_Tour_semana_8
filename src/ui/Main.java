@@ -107,10 +107,11 @@ private GestorEntidades gestor = new GestorEntidades();
                         .addContainerGap()
                         .addComponent(lbltipo)
                         .addGap(18, 18, 18)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblrut)
-                    .addComponent(txtrut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbopciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbopciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblrut)
+                        .addComponent(txtrut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbldato)
@@ -250,21 +251,35 @@ private GestorEntidades gestor = new GestorEntidades();
         case "Guia Turistico":
             gestor.agregarEntidad(
                     new GuiaTuristico(nombre,rut,dato));
+            
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Guia Turistico agregado correctamente."
+            );
             break;
 
         case "Trabajador Externo":
             gestor.agregarEntidad(
                     new ColaboradorExterno(nombre,rut,dato));
+            
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Trabajador Externo agregado correctamente."
+            );
             break;
 
         case "Vehiculo":
             gestor.agregarEntidad(
                     new Vehiculo(nombre,rut,dato));
+            
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Vehiculo agregado correctamente."
+            );
             break;
     }
 
-    JOptionPane.showMessageDialog(this,
-            "Entidad agregada correctamente.");
+
 
     txtnombre.setText("");
     txtrut.setText("");
