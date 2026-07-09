@@ -43,7 +43,7 @@ En esta etapa, la agencia necesita ampliar su sistema para gestionar otras entid
 
 ### RecursoAgencia
 
-Clase base que contiene la información común de todas las entidades, como:
+Clase base que contiene la información común de todas las clases, como:
 
 - Nombre
 - RUT
@@ -88,7 +88,7 @@ Interfaz que define el método:
 mostrarResumen()
 ```
 
-Todas las entidades implementan esta interfaz para mostrar su información.
+Todas las clases implementan esta interfaz para mostrar su información.
 
 ---
 
