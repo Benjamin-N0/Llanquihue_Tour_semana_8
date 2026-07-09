@@ -4,6 +4,7 @@ import model.GuiaTuristico;
 import model.ColaboradorExterno;
 import model.Vehiculo;
 import javax.swing.JOptionPane;
+import util.Validador;
 
 public class Main extends javax.swing.JFrame {
 
@@ -232,10 +233,11 @@ private GestorEntidades gestor = new GestorEntidades();
     //Boton Agregar
     private void btnagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarActionPerformed
                 
-        String nombre = txtnombre.getText();
-        String rut = txtrut.getText();
-        String dato = txtdato.getText();
-                
+        String nombre = txtnombre.getText().trim();
+        String rut = txtrut.getText().trim();
+        String dato = txtdato.getText().trim();
+    
+        //validar datos vacios
     if(nombre.isEmpty() || rut.isEmpty() || dato.isEmpty()){
 
         JOptionPane.showMessageDialog(this,
@@ -243,6 +245,24 @@ private GestorEntidades gestor = new GestorEntidades();
 
         return;
     }
+    
+    //validar si en el nombre hay numeros
+    if(!Validador.validarNombre(nombre)){
+
+    JOptionPane.showMessageDialog(this,
+            "El nombre solo puede contener letras.");
+
+    return;
+}
+    //valida el rut
+    if(!Validador.validarRut(rut)){
+
+    JOptionPane.showMessageDialog(this,
+            "Ingrese un RUT válido.");
+
+    return;
+}
+    
 
     String opcion = cmbopciones.getSelectedItem().toString();
 
