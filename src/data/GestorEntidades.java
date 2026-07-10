@@ -13,7 +13,7 @@ import model.Vehiculo;
 public class GestorEntidades {
     private ArrayList<Registrable> entidades;
     
-// constructor
+
     public GestorEntidades() {
         entidades = new ArrayList<>();
     }
